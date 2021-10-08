@@ -118,7 +118,7 @@
 
   /* Home */
   #home {
-    background: url() center/cover no-repeat;
+    background: url("../imgs/home-background.png") center/cover no-repeat;
     padding: 40px;
     text-align: center;
   }
