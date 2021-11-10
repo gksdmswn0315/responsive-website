@@ -10,12 +10,11 @@ document.addEventListener("scroll", () => {
     } else {
         navbar.classList.remove('navbar--dark');
     }
-
 });
 
 //넷바메뉴 선택시 해당 부분으로 이동하기
 const navbarMenu = document.querySelector('.navbar__menu');
-navbarMenu.addEventListener("click", (event)=>{
+navbarMenu.addEventListener("click", (event)=> { // 화살표 함수 (학교에서 안배움)
     const target = event.target;
     const link = target.dataset.link;
     if(link == null) {
@@ -34,13 +33,13 @@ contactMeBtn.addEventListener("click", ()=> {
 //home 투명도 조절
 const home = document.querySelector(".home__container")
 const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener("scroll", ()=>{
+document.addEventListener("scroll", ()=> {
     home.style.opacity = 1 - window.scrollY/homeHeight;
 });
 
 //햄버거 메뉴 클릭할 때
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
-navbarToggleBtn.addEventListener("click", ()=>{
+navbarToggleBtn.addEventListener("click", ()=> {
     navbarMenu.classList.toggle("open");
 });
 
@@ -48,3 +47,4 @@ function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior : 'smooth'});
 }
+
